@@ -56,3 +56,31 @@ const myFunction = function (){
 
 myFunction();
 
+// ++++++++++++++++++++++++++++++++++++++++++
+// Stack and Heap Memory
+// Stack (Used in Primitive) , Heap (Used in Non-Primitive)
+
+
+// In stack we get copy 
+let myYoutubename = "vishalrakhunde"
+
+let anothername = myYoutubename
+anothername = "codewithvishal"
+
+console.log(myYoutubename);
+console.log(anothername);  
+
+// In Heap we get refernce
+
+let userOne ={
+    email:"user@easestart.com",
+    upi:"user@ybl"
+
+}
+
+let userTwo = userOne
+
+userTwo.email = "user@vadivfashion.com"
+
+console.log(userOne.email);
+console.log(userTwo.email);
