@@ -23,3 +23,42 @@ let someNumber = 33
 let stringNUmber = String(someNumber); //This String convert number into string
 console.log(stringNUmber);
 
+//  ********** Operations ***********
+
+let value =3
+let negvalue = -value
+console.log(negvalue);
+
+
+
+console.log(2+2);
+console.log(2-2);
+console.log(2*2);
+console.log(2/2);
+console.log(2%2);
+console.log(2**2);
+
+
+let str1 ="hello"
+let str2 ="Vishal"
+console.log(str1+" "+str2);
+
+console.log("1"+2);
+console.log(1+"2");
+console.log("1"+2+2);
+console.log(1+2+"2");
+
+console.log((3+4)*5%3);
+
+// prefix => first Increment then print
+console.log("prefix");
+let gameCounter =100
+++gameCounter;
+console.log(gameCounter);
+
+
+// postfix => first print then Increment
+console.log("postfix");
+let Counter =100
+Counter++;
+console.log(Counter);
