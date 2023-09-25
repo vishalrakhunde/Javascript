@@ -61,3 +61,27 @@ console.log(Object.entries(tinderUser));
 
 // checking if there is value present in object => return in boolean
 console.log(tinderUser.hasOwnProperty('isLoggedIn'));
+
+// Object destructuring and JSON APi
+
+const course ={
+    coursename:"Js in hindi",
+    price:"999",
+    courseInstructor:"hitesh"
+}
+// course.courseInstructor
+
+// const {courseInstructor} =course
+// we can also change the name here 
+const {courseInstructor:Instructor} = course
+
+// console.log(courseInstructor);
+console.log(Instructor);
+
+
+// example in react 
+// const navbar =({company})=>{
+
+// }
+// navbar(company="hitesh");
+
