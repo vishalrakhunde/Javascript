@@ -5,7 +5,7 @@ var accountPassword = "12345"
 accountCity ="pune"
 let accountState;
 
-// accountId =2 // Can niether be updated nor be re-declared
+// accountId =2 // Can niether be updated nor be re-declared because we are using const
 
 accountEmail ="vishal@abc.com"
 accountPassword ="6546743"
