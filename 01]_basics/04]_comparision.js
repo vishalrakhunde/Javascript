@@ -29,3 +29,5 @@ console.log("2">"12");   //true  // first char of "2" is less than first char of
 console.log("2"=="12");  //false
 
 // When comparing two strings, "2" will be greater than "12", because (alphabetically) 1 is less than 2.
+
+// In the case of the comparison "2">"12", the first character of "2" is less than the first character of "12". This is because the ASCII code for the character "2" is 50, and the ASCII code for the character "1" is 49.
