@@ -1,3 +1,5 @@
+// JavaScript strings are for storing and manipulating text.
+
 const name = "vishal"
 const Age = 20
 
