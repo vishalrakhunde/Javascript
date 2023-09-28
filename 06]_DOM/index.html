@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: black;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div>
+
+    <h1 id="title">DOM</h1>
+
+    <p id="para">Hi,  i am vishal learing <span style="display: none;" >DOM</span> with chai and code</p>
+
+    <p id="head" class="s-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.  <span style="display: none; font-size:20px;  color: aqua; ">DOM</span> Est rem repellendus autem.</p>
+
+    <h2>Lorem ipsum dolor sit amet.</h2>
+    <h2>Lorem ipsum dolor sit amet.</h2>
+    <h2>Lorem ipsum dolor sit amet.</h2>
+
+    <input type="password">
+
+    <ul>
+       <li>One</li>
+       <li>Two</li>
+       <li>Three</li>
+    </ul>
+<ul>
+    <li class="list-item">first</li>
+    <li class="list-item">Second</li>
+    <li class="list-item">Third</li>
+</ul>
+
+    </div>
+
+    <script>
+
+document.querySelector('#title').getAttribute('id')
+
+document.querySelector('#title').setAttribute('class','test','heading')
+document.querySelector('#para').setAttribute('id','para2') //setting attribute from javascript
+
+
+ const title = document.querySelector('#head')
+ title.style.backgroundColor = 'green'
+ title.style.padding="15px"
+ title.style.borderRadius ="15px"
+
+   console.log(title.textContent);  // all text including which is hidden print
+   console.log(title.innerHTML);  // all text including html value inside text
+   console.log(title.innerText); // text 
+
+   document.querySelector('h2').innerText ="hi i am h2"
+   document.querySelectorAll('h2')[2].style.color= "yellow"
+  
+document.querySelector('input[type="password"]')
+
+document.querySelector('ul:first-child')
+
+const myul = document.querySelector('ul')
+myul.querySelector('li')
+const turngreen = myul.querySelector('li')
+turngreen.style.backgroundColor = "green"
+turngreen.style.backgroundColor = "10px"
+turngreen.innerText ="five"
+
+document.querySelectorAll('li')
+const tempList = document.querySelectorAll('li')
+// tempList.style.color = "green" // this is wrong method 
+
+tempList[0].style.color ="red"  // here this is in nodelist so we use foreach loop
+tempList.forEach(function(l){
+    l.style.backgroundColor="yellow"
+    l.style.color="red"
+})
+
+ const temp = document.getElementsByClassName('list-item')
+//  here this is htmlcollection use can't use foreach loop here so we convert it into Array
+
+console.log(Array.from(temp))
+const myConvertedArray =Array.from(temp)
+myConvertedArray.forEach(function(li){
+    li.style.color='green'
+})
+
+    </script>
+</body>
+</html>  
