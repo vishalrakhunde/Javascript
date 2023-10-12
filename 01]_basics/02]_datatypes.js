@@ -67,8 +67,8 @@ let myYoutubename = "vishalrakhunde"
 let anothername = myYoutubename
 anothername = "codewithvishal"
 
-console.log(myYoutubename);
-console.log(anothername);  
+console.log(myYoutubename); // output => vishalrakhunde
+console.log(anothername);   // output => codewithvishal
 
 // In Heap we get refernce
 
@@ -82,5 +82,5 @@ let userTwo = userOne
 
 userTwo.email = "user@vadivfashion.com"
 
-console.log(userOne.email);
-console.log(userTwo.email);
+console.log(userOne.email);  // output => user@vadivfashion.com
+console.log(userTwo.email);  // output => user@vadivfashion.com
