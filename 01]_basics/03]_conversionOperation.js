@@ -43,10 +43,13 @@ let str1 ="hello"
 let str2 ="Vishal"
 console.log(str1+" "+str2);
 
+
+
+//  when you use the + operator with one or both operands as strings, it performs string concatenation. This means that it converts the non-string operand(s) into a string and then concatenates them. This behavior is called type coercion, 
 console.log("1"+2); // all convert into string
-console.log(1+"2");
-console.log("1"+2+2);
-console.log(1+2+"2");
+console.log(typeof(1+"2"));
+console.log(typeof("1"+2+2));
+console.log((1+2+"2"));
 
 console.log((3+4)*5%3);
 
@@ -56,9 +59,28 @@ let gameCounter =100
 ++gameCounter;
 console.log(gameCounter);
 
+// real world example of prefix
+let odometerReading = 10000; // Initial odometer reading
+
+// Prefix increment: First, increment the odometer reading and then display it
+let newMileage = ++odometerReading;
+
+console.log("New Odometer Reading (Prefix): " + newMileage); // New reading is immediately displayed
+
+
 
 // postfix => first print then Increment
 console.log("postfix");
 let Counter =100
 Counter++;
 console.log(Counter);
+
+// Real world example of postfix
+
+let currentTicketNumber = 100; // Initial ticket number
+
+// Postfix increment: First, display the current ticket number, then increment it for the next customer
+let ticketForCustomer = currentTicketNumber++;
+
+console.log("Ticket for Customer (Postfix): " + ticketForCustomer); // Display the current ticket number
+console.log("Next Available Ticket: " + currentTicketNumber); // Show the incremented ticket number for the next customer
