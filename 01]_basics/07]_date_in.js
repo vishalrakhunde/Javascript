@@ -1,4 +1,4 @@
-// Dates
+// Dates  
 
 let myDate =new Date()
 // console.log(myDate.toString());
@@ -35,3 +35,4 @@ console.log(newDate.getDay());  // Day start with monday
 newDate.toLocaleString('default',{
     weekday:"long"
 })
+
