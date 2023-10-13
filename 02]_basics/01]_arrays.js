@@ -38,6 +38,8 @@ console.log(typeof(newArr));
 
 
 // slice , splice
+
+// slice creates a new array from part of the original array without changing the original, while splice changes the original array by removing elements and returns the removed elements in a new array
 console.log("Slice and splice")
 
 console.log("A ",myArr);
@@ -51,3 +53,24 @@ const myn2 = myArr.splice(1,3)
 console.log("C ",myArr);
 console.log(myn2);
 
+
+
+// real world example
+const names = ["Alice","Bob","charlie","David","Eve"];
+
+// check if a specific name is in the array
+
+const nameTofind ="charlie";
+if(names.includes(nameTofind)){
+    console.log(`${nameTofind} is in the list.`);
+} else{
+    console.log(`${nameTofind} is not in the list.`);
+}
+
+// Find the index of a specific name in the array
+const index = names.indexOf("David");
+if(index !== -1){
+    console.log(`The index of David is ${index}.`);
+} else{
+    console.log("David is not in the list.");
+}
