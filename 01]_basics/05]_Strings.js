@@ -43,3 +43,13 @@ const splitChar = "vishal-rakhunde-vishal-mangrul-jalna-pune"
 console.log(splitChar.split('-'));
 
 
+// real world examples of strings
+
+
+//1] User Input and Output: Strings are commonly used to handle user input and display output in web applications
+
+/* 
+let userInput = document.getElementById("user-input").value; // read user input
+document.getElementById("output").textContent ="you entered: "+ userInput; // Display output
+
+*/
