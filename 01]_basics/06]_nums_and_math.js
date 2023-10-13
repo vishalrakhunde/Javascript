@@ -37,6 +37,7 @@ console.log(Math.floor((Math.random()*10)) + 1); // here 1 is added because avoi
 
 const min =10
 const max =20
-console.log(Math.floor(Math.random() *(max - min + 1) +min)); // print random values bet 10 -20
+console.log(Math.floor(Math.random() *(max - min +1 )+min)); // print random values bet 10 -20
 // +min because number should start from 10 that is min value
 
+// adding 1 to max - min ensures that the range calculation covers all the integers between min and max, including both min and max.
