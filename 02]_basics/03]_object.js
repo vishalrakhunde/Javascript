@@ -1,7 +1,7 @@
 // singleton
 // object.create
 
-// object literals
+// object literals 
 
 const mySum = Symbol("key1")
 
@@ -16,6 +16,7 @@ const JsUser ={
     lastLoginDays:["Monday","saturday"]
 
 }
+
 
 
 // method to access values in objects
@@ -45,3 +46,5 @@ JsUser.greetingtwo = function(){
     console.log(`Hello Js user,${this.name}`);
 }
 console.log(JsUser.greetingtwo());
+
+console.log(JsUser); 
