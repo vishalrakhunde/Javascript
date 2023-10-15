@@ -6,7 +6,7 @@ tinderUser.id ="123abc"
 tinderUser.name="vishal"
 tinderUser.isLoggedIn = false
 
-// console.log(tinderUser);
+console.log(tinderUser);
 
 
 const regularUser ={
@@ -36,6 +36,7 @@ const obj3 ={4:"a", 6:"b"}
 const obj4 ={...obj1,...obj2,...obj3}
 console.log(obj4);
 
+
 const users = [
     {
      id: 1,
@@ -57,7 +58,7 @@ console.log(tinderUser);
 
 console.log(Object.keys(tinderUser));  // keys in objects => return in arrays
 console.log(Object.values(tinderUser));  // values in objects => return in arrays
-console.log(Object.entries(tinderUser));
+console.log(Object.entries(tinderUser));  
 
 // checking if there is value present in object => return in boolean
 console.log(tinderUser.hasOwnProperty('isLoggedIn'));
