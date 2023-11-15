@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html Events</title>
+</head>
+<body style="background-color: #414141; color: aliceblue;">
+    <h2>Amazing image</h2>
+    <div>
+        <ul id="images">
+<li><img width="200px" id="photoOne" src="https://images.pexels.com/photos/5372613/pexels-photo-5372613.jpeg?auto=compress&cs=tinysrgb&w=400&lazy=load" alt=""></li>
+
+<li><img width="200px" id="photoTwo" src="https://images.pexels.com/photos/18125686/pexels-photo-18125686/free-photo-of-woman-posing-at-night.jpeg?auto=compress&cs=tinysrgb&w=400&lazy=load" alt="photoOne"></li>
+
+<li><img width="200px" id="photoThree" src="https://images.pexels.com/photos/14110513/pexels-photo-14110513.jpeg?auto=compress&cs=tinysrgb&w=400&lazy=load" alt=""></li>
+
+<li><img width="200px" id="photoFour" src="https://images.pexels.com/photos/16999074/pexels-photo-16999074/free-photo-of-young-brunette-wearing-a-checkered-coat-and-red-beret-and-walking-on-a-sidewalk.jpeg?auto=compress&cs=tinysrgb&w=400&lazy=load" alt=""></li>
+
+<li><img width="200px" id="photoFive" src="https://images.pexels.com/photos/18277222/pexels-photo-18277222/free-photo-of-cinematic-view.jpeg?auto=compress&cs=tinysrgb&w=400&lazy=load" alt=""></li>
+
+<li><img width="200px" id="photoSix" src="https://images.pexels.com/photos/8385643/pexels-photo-8385643.jpeg?auto=compress&cs=tinysrgb&w=400&lazy=load" alt=""></li>
+
+<li><a style="color: aliceblue;" href="https://google.com" id="google">Google</a></li>
+        </ul>
+    </div>
+</body>
+<script>
+    // document.getElementById('photoFive').onclick = function(){
+    //     alert("photofive")
+    // }
+
+
+    // type, timesstamp , defaultPrevented
+    // target, toElement,srcElement,currentTarget,
+    // clientX , clientY ,screenX,screenY
+    // altkey, ctrlKey,shiftkey,keyCode
+    document.getElementById('images').addEventListener('click',function(e) {
+       console.log("clicked inside the ul");
+    },false)
+
+    document.getElementById('photoFive').addEventListener('click',function(e){
+        console.log("clicked on photoFive");
+        e.stopPropagation() // event bubble hoge upper ke images ul per nahi jata hai
+    },false)
+
+
+// false is bubble event 
+// here false = first photofive will print then images ul will print 
+
+/*
+document.getElementById('images').addEventListener('click',function(e) {
+       console.log("clicked inside the ul");
+    },true)
+
+    document.getElementById('photoFive').addEventListener('click',function(e){
+        console.log("clicked on photoFive");
+    },true)
+    */
+// true is capturing event
+// here true will print images ul then photoFive
+
+
+document.getElementById('google').addEventListener('click',function(e){
+e.preventDefault();
+e.stopPropagation();
+console.log("google clicked");
+
+},false)
+
+
+document.querySelector('#images').addEventListener('click',function(abc){
+    console.log(abc);
+    console.log(abc.target.parentNode);
+    console.log(abc.target.tagName);
+    if(abc.target.tagName==='IMG'){
+        console.log(abc.target.id);
+        let removeIt = abc.target.parentNode
+    removeIt.remove() // way one to remove it
+    // removeIt.parentNode.removeChild(removeIt)  // way two 
+    }
+   
+
+},false)
+
+
+
+
+
+</script>
+</html>
